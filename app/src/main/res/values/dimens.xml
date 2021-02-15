@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="min_dim">8dp</dimen>
+    <dimen name="med_dim">16dp</dimen>
+    <dimen name="max_dim">32dp</dimen>
+</resources>
