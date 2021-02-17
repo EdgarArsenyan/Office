@@ -1,8 +1,5 @@
 package com.example.office.adapter
 
-import android.content.Context
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.office.databinding.CategoryLayoutBinding
 import com.example.office.models.CategoryModel
-import com.example.office.models.Singleton
-import com.example.office.ui.ItemActivity
 
-class CategoryAdapter(private val posts: List<CategoryModel>, private val listener: ItemClickListener): RecyclerView.Adapter<CategoryAdapter.CategoryVH>() {
+class CategoryAdapter(private val posts: MutableList<CategoryModel>, private val listener: ItemClickListener): RecyclerView.Adapter<CategoryAdapter.CategoryVH>() {
 
     interface ItemClickListener {
         fun onClickedItem(itemID: Int)

@@ -5,13 +5,15 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.office.models.CategoryModel
 import com.example.office.models.ItemModel
 
 @Dao
 interface ItemsDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(item: ItemModel)
+    suspend fun insertAll(item: CategoryModel)
 
     @Query("SELECT * FROM item_list")
-    fun getAllItems() : LiveData<List<ItemModel>>
+    fun getAllItems() : LiveData<List<CategoryModel>>
 }
