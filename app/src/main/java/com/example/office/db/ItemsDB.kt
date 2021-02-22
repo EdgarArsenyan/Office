@@ -5,20 +5,25 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.office.models.CategoryModel
-import com.example.office.models.ItemModel
 
 @Database(entities = [CategoryModel::class], version = 1, exportSchema = false)
 abstract class ItemsDB : RoomDatabase() {
 
     abstract val itemsDao: ItemsDao
 
-    companion object{
+    companion object {
+
         @Volatile
         private var INSTANCE_DB: ItemsDB? = null
+
         fun getInstance(context: Context): ItemsDB {
+
             synchronized(this) {
+
                 var instance = INSTANCE_DB
-                if (instance == null){
+
+                if (instance == null) {
+
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         ItemsDB::class.java,

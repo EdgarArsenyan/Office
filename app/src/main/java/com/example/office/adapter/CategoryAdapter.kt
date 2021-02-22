@@ -34,10 +34,11 @@ class CategoryAdapter(private val posts: MutableList<CategoryModel>, private val
         fun bind(categoryModel: CategoryModel)
         {
             this.categoryModel = categoryModel
-            itemBinding.categoryText.text = categoryModel.categoryName
+            itemBinding.title.text = categoryModel.categoryName
+            itemBinding.description.text = categoryModel.categoryDesc
             Glide.with(itemBinding.root)
                     .load(categoryModel.ImageUrl)
-                    .centerInside()
+                .fitCenter()
                     .into(itemBinding.categoryImage)
         }
 

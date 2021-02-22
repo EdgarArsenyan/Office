@@ -1,4 +1,4 @@
-package com.example.office.ui
+package com.example.office.ui.activitis
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +21,8 @@ class SplashActivity : AppCompatActivity() {
                 MainActivity::class.java
             )
             startActivity(intent)
+            finish()
         })
     }
+
 }

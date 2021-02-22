@@ -10,5 +10,6 @@ data class CategoryModel(
     @PrimaryKey(autoGenerate = false)
     val i: Int,
     val ImageUrl: String,
-    val categoryName: String
+    val categoryName: String,
+    val categoryDesc:String
 )
